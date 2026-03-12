@@ -16,6 +16,8 @@ from configurations import values
 import os
 
 class Dev(Configuration):
+    EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+    ADMINS = [("Ben", "ben@example.com")]
     OMDB_KEY = "9f68b11b"
     # Build paths inside the project like this: BASE_DIR / 'subdir'.
     BASE_DIR = Path(__file__).resolve().parent.parent
